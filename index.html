@@ -1,294 +1,338 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đinh Thị Quỳnh | Lập trình viên web</title>
-<meta name="description" content="Website cá nhân của Đinh Thị Quỳnh, sinh viên CNTT làm web và phần mềm.">
-<meta property="og:title" content="Đinh Thị Quỳnh | Lập trình viên web">
-<meta property="og:description" content="Xem các dự án và thông tin liên hệ của mình.">
+<title>Đinh Thị Quỳnh | IT Graduate</title>
+<meta name="description" content="Đinh Thị Quỳnh, IT graduate from Vinh University, looking for a professional team to learn and grow with.">
+<meta property="og:title" content="Đinh Thị Quỳnh | IT Graduate">
+<meta property="og:description" content="Đinh Thị Quỳnh, IT graduate from Vinh University, looking for a professional team to learn and grow with.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#3d3bf3">
+<meta name="theme-color" content="#0f1f3a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👋%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#eef0fb;
-  --surface:#ffffff;
-  --ink:#16163a;
-  --muted:#5a5c82;
-  --accent:#3d3bf3;
-  --accent-ink:#ffffff;
-  --pop:#f7e463;
-  --line:#d5d8f0;
-  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#12122b;--surface:#1c1c40;--ink:#eceafc;--muted:#a6a8d0;
-    --accent:#8c8bff;--accent-ink:#12122b;--line:#2c2c5a;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#12122b;--surface:#1c1c40;--ink:#eceafc;--muted:#a6a8d0;
-  --accent:#8c8bff;--accent-ink:#12122b;--line:#2c2c5a;
-}
+:root{--bg:#e9eef5;--surface:#fff;--ink:#0f1f3a;--muted:#4e5f78;--accent:#1b63d6;--accent-ink:#fff;--pop:#b9d3f7;--line:#cfd8e6;--navy:#0f1f3a;
+--display:"Bricolage Grotesque","PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+--body:"DM Sans","PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1424;--surface:#13233e;--ink:#e6edf7;--muted:#9fb0c9;--accent:#5b9bff;--accent-ink:#0a1424;--pop:#274a7a;--line:#223454}}
+:root[data-theme="dark"]{--bg:#0a1424;--surface:#13233e;--ink:#e6edf7;--muted:#9fb0c9;--accent:#5b9bff;--accent-ink:#0a1424;--pop:#274a7a;--line:#223454}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:1.05rem;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;font-size:1.05rem;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
-
-/* Header */
 header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.bar{display:flex;align-items:center;justify-content:space-between;height:4rem;gap:1rem}
 .logo{font-family:var(--display);font-weight:800;font-size:1.2rem;text-decoration:none}
-nav{display:flex;align-items:center;gap:1.5rem}
+nav{display:flex;align-items:center;gap:1.4rem}
 nav a{text-decoration:none;font-weight:500;color:var(--muted)}
 nav a:hover{color:var(--ink)}
-.theme{background:none;border:1px solid var(--line);color:var(--ink);width:2.4rem;height:2.4rem;border-radius:50%;cursor:pointer;font-size:1.1rem}
-.theme:hover{border-color:var(--accent)}
-@media (max-width:640px){nav a.hide-sm{display:none}nav{gap:1rem}}
-
-/* Hero */
+.lang{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--ink);padding:.35rem .8rem;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.theme{background:none;border:1.5px solid var(--line);color:var(--ink);width:2.3rem;height:2.3rem;border-radius:50%;cursor:pointer;font-size:1.05rem}
+@media (max-width:760px){nav a.hide-sm{display:none}nav{gap:.6rem}}
 .hero{padding:clamp(3rem,9vw,7rem) 0 clamp(3rem,7vw,5rem)}
 .hero .wrap{display:grid;gap:3rem;grid-template-columns:1.5fr 1fr;align-items:center}
-.hero h1{font-family:var(--display);font-weight:800;line-height:.98;letter-spacing:-.03em;font-size:clamp(2.7rem,8.2vw,6.2rem)}
-.hero p.lead{margin-top:1.5rem;max-width:34rem;font-size:1.2rem;color:var(--muted)}
+.hero h1{font-family:var(--display);font-weight:800;line-height:1.05;letter-spacing:-.02em;font-size:clamp(2rem,5.2vw,3.7rem)}
+.lead{margin-top:1.5rem;max-width:34rem;font-size:1.15rem;color:var(--muted)}
 .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);transition:transform .15s ease,background .15s ease}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);transition:transform .15s}
 .btn:hover{transform:translateY(-2px)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.portrait{position:relative;justify-self:center;width:min(100%,340px);aspect-ratio:4/5}
+.portrait{position:relative;justify-self:center;width:min(100%,330px);aspect-ratio:4/5}
 .portrait::before{content:"";position:absolute;inset:0;transform:translate(14px,14px);background:var(--pop);border-radius:999px 999px 28px 28px}
-.portrait .frame{position:absolute;inset:0;border-radius:999px 999px 28px 28px;background:var(--accent);overflow:hidden;display:grid;place-items:center;color:var(--accent-ink);font-family:var(--display);font-weight:800;font-size:7rem}
-.portrait img{width:100%;height:100%;object-fit:cover}
-@media (max-width:820px){
-  .hero .wrap{grid-template-columns:1fr}
-  .portrait{order:-1;width:min(62%,250px);justify-self:start}
-}
-
-/* Page-load: one orchestrated reveal */
-@media (prefers-reduced-motion:no-preference){
-  .hero .wrap>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-  .hero .wrap>*:nth-child(2){animation-delay:.12s}
-  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-}
+.frame{position:absolute;inset:0;border-radius:999px 999px 28px 28px;background:var(--navy);overflow:hidden;display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:7rem}
+.frame img{width:100%;height:100%;object-fit:cover}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.portrait{order:-1;width:min(60%,240px);justify-self:start}}
+@media (prefers-reduced-motion:no-preference){.hero .wrap>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.hero .wrap>*:nth-child(2){animation-delay:.12s}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-
-/* Sections */
-section{padding:clamp(3rem,7vw,5.5rem) 0}
-h2{font-family:var(--display);font-weight:800;letter-spacing:-.02em;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:2rem}
-.about{display:grid;gap:3rem;grid-template-columns:1fr 1fr}
-.about p+p{margin-top:1rem}
-.about p{max-width:36rem}
-.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none}
-.chips li{padding:.45rem 1rem;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;font-weight:500}
-.subhead{font-family:var(--display);font-weight:700;font-size:1.25rem;margin-bottom:1rem}
-@media (max-width:820px){.about{grid-template-columns:1fr;gap:2rem}}
-
-/* Projects */
-.projects{display:grid;gap:1.5rem;grid-template-columns:repeat(6,1fr)}
-.project{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:border-color .2s ease,transform .2s ease}
-.project:hover{border-color:var(--accent);transform:translateY(-4px)}
-.project.big{grid-column:span 6;flex-direction:row}
-.cover{min-height:180px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:2.6rem;color:#fff;letter-spacing:-.02em}
-.project.big .cover{flex:1.1;min-height:280px;font-size:4rem}
-.c1{background:linear-gradient(135deg,#3d3bf3,#7a5cff)}
-.c2{background:#ff6b5b}
-.c3{background:#0f9d8a}
-.info{padding:1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
-.project.big .info{flex:1;justify-content:center;padding:2rem}
-.info h3{font-family:var(--display);font-size:1.45rem;line-height:1.15}
-.info p{color:var(--muted);font-size:1rem}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin-top:auto}
-.tags li{font-size:.85rem;padding:.15rem .65rem;border-radius:6px;background:var(--bg);color:var(--muted);font-weight:500}
-@media (max-width:900px){.project{grid-column:span 3}.project.big{grid-column:span 6}}
-@media (max-width:640px){.projects{grid-template-columns:1fr}.project,.project.big{grid-column:auto;flex-direction:column}.project.big .cover{min-height:200px;font-size:3rem}}
-
-/* Timeline */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.02em;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.1;margin-bottom:1.8rem}
+.two{display:grid;gap:3rem;grid-template-columns:1fr 1fr}
+.two p+p{margin-top:1rem}
+.sub{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0 0 .8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;list-style:none;margin-bottom:1.5rem}
+.chips li{padding:.4rem .95rem;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;font-weight:500}
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:1.5rem}}
 .timeline{list-style:none;border-left:3px solid var(--accent);margin-left:.4rem}
-.timeline li{position:relative;padding:0 0 2rem 1.8rem}
-.timeline li:last-child{padding-bottom:0}
-.timeline li::before{content:"";position:absolute;left:-.62rem;top:.45rem;width:1rem;height:1rem;border-radius:50%;background:var(--pop);border:3px solid var(--accent)}
+.timeline>li{position:relative;padding:0 0 2.4rem 1.8rem}
+.timeline>li:last-child{padding-bottom:0}
+.timeline>li::before{content:"";position:absolute;left:-.62rem;top:.45rem;width:1rem;height:1rem;border-radius:50%;background:var(--pop);border:3px solid var(--accent)}
 .when{color:var(--muted);font-weight:500;font-size:.95rem}
-.timeline h3{font-family:var(--display);font-size:1.3rem;margin:.1rem 0 .3rem}
-.timeline p{color:var(--muted);max-width:40rem}
-
-/* Contact */
-.contact{background:var(--accent);color:var(--accent-ink);border-radius:32px;padding:clamp(2rem,6vw,4.5rem);margin-bottom:3rem}
+.timeline h3{font-family:var(--display);font-size:1.35rem;line-height:1.25;margin:.1rem 0}
+.org{color:var(--accent);font-weight:700;margin-bottom:.6rem}
+.timeline ul{padding-left:1.1rem;color:var(--muted);max-width:44rem}
+.timeline ul li{margin-bottom:.35rem}
+.result{margin-top:.8rem;padding:.8rem 1rem;background:var(--surface);border-left:4px solid var(--pop);border-radius:0 12px 12px 0;max-width:44rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.6rem}
+.card h3{font-family:var(--display);font-size:1.3rem;line-height:1.25}
+.card p{color:var(--muted)}
+.card ul{list-style:none;margin-top:.4rem}
+.card ul li{padding:.5rem 0;border-top:1px solid var(--line)}
+.card ul li:first-child{border-top:0}
+.learn{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:1.5rem}
+.learn .card h3{margin-bottom:.4rem}
+.intro,.note{color:var(--muted);max-width:44rem}
+.note{margin-top:1.5rem}
+.contact{background:var(--navy);color:#fff;border:1px solid var(--line);border-radius:32px;padding:clamp(2rem,6vw,4.5rem);margin-bottom:3rem}
 .contact h2{margin-bottom:1rem}
-.contact p{max-width:32rem;opacity:.9}
-.mail{display:inline-block;margin-top:1.5rem;font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,4.4vw,2.4rem);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:3px;word-break:break-all}
-.social{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem;list-style:none}
-.social a{display:inline-block;padding:.55rem 1.2rem;border:2px solid currentColor;border-radius:999px;text-decoration:none;font-weight:700}
-.social a:hover{background:var(--accent-ink);color:var(--accent)}
-footer{padding:1.5rem 0 3rem;color:var(--muted);font-size:.95rem}
+.contact p{max-width:32rem;opacity:.92}
+.mail{display:inline-block;margin-top:1.5rem;font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,4.2vw,2.2rem);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:3px;word-break:break-all}
+.loc{margin-top:1rem;opacity:.92}
+footer{padding:1rem 0 3rem;color:var(--muted);font-size:.95rem}
 </style>
 </head>
 <body>
-
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#top">Văn A</a>
-    <nav aria-label="Điều hướng chính">
-      <a class="hide-sm" href="#gioi-thieu">Giới thiệu</a>
-      <a class="hide-sm" href="#du-an">Dự án</a>
-      <a class="hide-sm" href="#hanh-trinh">Hành trình</a>
-      <a href="#lien-he">Liên hệ</a>
-      <button class="theme" id="theme" aria-label="Đổi giao diện sáng hoặc tối">◐</button>
+    <a class="logo" href="#top">Quỳnh</a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#about" data-i18n="nav_about">About</a>
+      <a class="hide-sm" href="#learning" data-i18n="nav_learn">Learning</a>
+      <a class="hide-sm" href="#experience" data-i18n="nav_exp">Experience</a>
+      <a class="hide-sm" href="#education" data-i18n="nav_edu">Education</a>
+      <a class="hide-sm" href="#contact" data-i18n="nav_contact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">EN</button>
+        <button data-lang="zh" aria-pressed="false">中文</button>
+        <button data-lang="vi" aria-pressed="false">VI</button>
+      </div>
+      <button class="theme" id="theme" aria-label="Light / dark">◐</button>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <!-- HERO -->
   <div class="hero">
     <div class="wrap">
       <div>
-        <h1>Mình là Văn A, làm web và phần mềm.</h1>
-        <p class="lead">Sinh viên Công nghệ thông tin tại Hà Nội. Mình thích biến ý tưởng thành những sản phẩm gọn, nhanh và dễ dùng.</p>
+        <h1 data-i18n="h1"></h1>
+        <p class="lead" data-i18n="lead"></p>
         <div class="cta">
-          <a class="btn primary" href="#du-an">Xem dự án</a>
-          <a class="btn ghost" href="#lien-he">Liên hệ mình</a>
+          <a class="btn primary" href="#experience" data-i18n="cta1"></a>
+          <a class="btn" href="#contact" data-i18n="cta2"></a>
         </div>
       </div>
       <div class="portrait">
         <div class="frame">
-          <img src="img/anhthe.png" alt="Ảnh của Đinh Thị Quỳnh">
+          <!-- Add your photo: replace Q with <img src="avatar.jpg" alt="Đinh Thị Quỳnh"> -->
+          Q
         </div>
       </div>
     </div>
   </div>
 
-  <!-- GIỚI THIỆU -->
-  <section id="gioi-thieu">
-    <div class="wrap">
-      <h2>Giới thiệu</h2>
-      <div class="about">
-        <div>
-          <p>Mình là Đinh Thị Quỳnh, sinh viên năm cuối ngành Công nghệ thông tin. Mình bắt đầu với lập trình từ năm nhất và từ đó làm nhiều dự án nhỏ, từ website đến ứng dụng quản lý.</p>
-          <p>Ngoài giờ học, mình đọc về thiết kế giao diện, chơi cờ vua và đang tìm cơ hội thực tập ở vị trí lập trình web.</p>
-        </div>
-        <div>
-          <h3 class="subhead">Kỹ năng</h3>
-          <ul class="chips">
-            <li>HTML &amp; CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Git</li>
-            <li>Figma</li>
-          </ul>
-        </div>
+  <section id="about"><div class="wrap">
+    <h2 data-i18n="nav_about"></h2>
+    <div class="two">
+      <div>
+        <p data-i18n="about1"></p>
+        <p data-i18n="about2"></p>
       </div>
-    </div>
-  </section>
-
-  <!-- DỰ ÁN -->
-  <section id="du-an">
-    <div class="wrap">
-      <h2>Dự án</h2>
-      <div class="projects">
-        <a class="project big" href="#" aria-label="Xem dự án Quản lý chi tiêu">
-          <div class="cover c1">Chi tiêu</div>
-          <div class="info">
-            <h3>Ứng dụng quản lý chi tiêu</h3>
-            <p>Ghi lại thu chi hằng ngày, xem biểu đồ theo tháng và đặt hạn mức cho từng nhóm. Dùng được trên điện thoại.</p>
-            <ul class="tags"><li>React</li><li>Node.js</li><li>MongoDB</li></ul>
-          </div>
-        </a>
-        <a class="project" href="#" aria-label="Xem dự án Blog nấu ăn">
-          <div class="cover c2">Bếp nhà</div>
-          <div class="info">
-            <h3>Blog công thức nấu ăn</h3>
-            <p>Website chia sẻ công thức, có tìm kiếm theo nguyên liệu.</p>
-            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
-          </div>
-        </a>
-        <a class="project" href="#" aria-label="Xem dự án Bot nhắc lịch">
-          <div class="cover c3">Nhắc lịch</div>
-          <div class="info">
-            <h3>Bot nhắc lịch học</h3>
-            <p>Bot gửi tin nhắn nhắc lịch học và deadline mỗi sáng.</p>
-            <ul class="tags"><li>Python</li><li>API</li></ul>
-          </div>
-        </a>
-        <a class="project" href="#" aria-label="Xem dự án Trang quản lý thư viện">
-          <div class="cover c1">Thư viện</div>
-          <div class="info">
-            <h3>Hệ thống quản lý thư viện</h3>
-            <p>Bài tập lớn môn cơ sở dữ liệu: mượn, trả và thống kê sách.</p>
-            <ul class="tags"><li>SQL</li><li>PHP</li></ul>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HÀNH TRÌNH -->
-  <section id="hanh-trinh">
-    <div class="wrap">
-      <h2>Hành trình</h2>
-      <ol class="timeline">
-        <li>
-          <span class="when">2025 – nay</span>
-          <h3>Thực tập sinh lập trình web</h3>
-          <p>Tên công ty. Xây dựng giao diện và sửa lỗi cho sản phẩm đang chạy thật.</p>
-        </li>
-        <li>
-          <span class="when">2022 – nay</span>
-          <h3>Đại học, ngành Công nghệ thông tin</h3>
-          <p>Tên trường. Học cấu trúc dữ liệu, cơ sở dữ liệu, kỹ thuật phần mềm.</p>
-        </li>
-        <li>
-          <span class="when">2023</span>
-          <h3>Giải ba cuộc thi lập trình của khoa</h3>
-          <p>Làm việc nhóm bốn người, hoàn thành sản phẩm trong 48 giờ.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- LIÊN HỆ -->
-  <section id="lien-he">
-    <div class="wrap">
-      <div class="contact">
-        <h2>Cùng làm điều gì đó nhé</h2>
-        <p>Bạn có cơ hội thực tập, dự án hay chỉ muốn trao đổi? Gửi mình một email, mình trả lời trong 24 giờ.</p>
-        <a class="mail" href="mailto:ban@example.com">ban@example.com</a>
-        <ul class="social">
-          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      <div>
+        <h3 class="sub" data-i18n="sk1"></h3>
+        <ul class="chips">
+          <li data-i18n="s_test"></li><li data-i18n="s_code"></li><li data-i18n="s_pm"></li>
+          <li data-i18n="s_office"></li><li data-i18n="s_video"></li><li data-i18n="s_seo"></li>
+        </ul>
+        <h3 class="sub" data-i18n="sk2"></h3>
+        <ul class="chips">
+          <li data-i18n="s_team"></li><li data-i18n="s_listen"></li><li data-i18n="s_org"></li>
         </ul>
       </div>
     </div>
-  </section>
+  </div></section>
+
+  <section id="learning"><div class="wrap">
+    <h2 data-i18n="l_h"></h2>
+    <p class="intro" data-i18n="l_intro"></p>
+    <div class="learn">
+      <div class="card"><h3 data-i18n="l1_t"></h3><p data-i18n="l1_p"></p></div>
+      <div class="card"><h3 data-i18n="l2_t"></h3><p data-i18n="l2_p"></p></div>
+      <div class="card"><h3 data-i18n="l3_t"></h3><p data-i18n="l3_p"></p></div>
+      <div class="card"><h3 data-i18n="l4_t"></h3><p data-i18n="l4_p"></p></div>
+      <div class="card"><h3 data-i18n="l5_t"></h3><p data-i18n="l5_p"></p></div>
+    </div>
+    <p class="note" data-i18n="l_note"></p>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <h2 data-i18n="nav_exp"></h2>
+    <ol class="timeline">
+      <li>
+        <span class="when">03/2025 – 11/2026</span>
+        <h3 data-i18n="j1_t"></h3>
+        <div class="org">Choa Global</div>
+        <ul><li data-i18n="j1_a"></li><li data-i18n="j1_b"></li><li data-i18n="j1_c"></li><li data-i18n="j1_d"></li></ul>
+        <p class="result" data-i18n="j1_r"></p>
+      </li>
+      <li>
+        <span class="when">09/2024 – 02/2025</span>
+        <h3 data-i18n="j2_t"></h3>
+        <div class="org">WowUp</div>
+        <ul><li data-i18n="j2_a"></li><li data-i18n="j2_b"></li><li data-i18n="j2_c"></li><li data-i18n="j2_d"></li></ul>
+        <p class="result" data-i18n="j2_r"></p>
+      </li>
+    </ol>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <h2 data-i18n="nav_edu"></h2>
+    <div class="two">
+      <div class="card">
+        <span class="when">2020 – 2025</span>
+        <h3 data-i18n="e_t"></h3>
+        <p data-i18n="e_s"></p>
+        <p data-i18n="e_g"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="c_t"></h3>
+        <ul>
+          <li data-i18n="c1"></li><li data-i18n="c2"></li><li data-i18n="c3"></li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <h2 data-i18n="ct_h"></h2>
+      <p data-i18n="ct_p"></p>
+      <a class="mail" href="mailto:dinhquynh989899@gmail.com">dinhquynh989899@gmail.com</a>
+      <p class="loc" data-i18n="ct_loc"></p>
+    </div>
+  </div></section>
 </main>
 
-<footer>
-  <div class="wrap">© 2026 Đinh Thị Quỳnh. Làm bằng HTML và CSS.</div>
-</footer>
+<footer><div class="wrap">© 2026 Đinh Thị Quỳnh</div></footer>
 
 <script>
+var T={
+en:{nav_about:"About",nav_exp:"Experience",nav_edu:"Education",nav_contact:"Contact",
+h1:"Hi, I’m Quỳnh. I’m looking for a place to do real work and learn something new every day.",
+lead:"I graduated in Information Technology from Vinh University and have worked in two settings: a software company and a media company. I want to grow over the long term with a professional team.",
+cta1:"See what I’ve done",cta2:"Say hello",
+about1:"I studied Information Technology with a focus on software programming and development. Since then I have worked on both sides of a product: testing it with developers, and producing content that reaches real audiences.",
+about2:"I like clear tasks, honest progress tracking and using technology and AI to make repetitive work easier. I’m looking for a professional workplace where I can apply my IT skills to real work, keep learning from experienced people and grow steadily over the long term.",
+sk1:"Professional skills",sk2:"Soft skills",
+s_test:"Software testing",s_code:"Basic programming",s_pm:"Task & project support",s_office:"Office tools & AI",s_video:"Video editing",s_seo:"YouTube SEO",
+s_team:"Teamwork",s_listen:"Active listening",s_org:"Organization",
+j1_t:"Video Editor & YouTube SEO",
+j1_a:"Edited and finished videos with CapCut, Premiere, After Effects and Photoshop.",
+j1_b:"Optimized titles, descriptions and content for YouTube search.",
+j1_c:"Built small tools to automate repeated steps and save processing time.",
+j1_r:"Result: contributed to channels reaching 12 million total views and supported a revenue target of 1,000 USD per month.",
+j2_t:"Tester & Project Support Intern",
+j2_a:"Wrote test cases, ran functional tests and recorded results.",
+j2_b:"Reported bugs, tracked them and rechecked fixes with developers.",
+j2_c:"Created tasks, followed team progress and clarified requirements with clients.",
+j2_r:"Result: delivered phase 1 of an admissions website for a Chinese-language center.",
+e_t:"Vinh University",e_s:"School of Engineering and Technology. BSc in Information Technology, Software Programming and Development.",e_g:"CGPA 3.05 / 4.0",
+c_t:"Certificates",c1:"HSK 4, Chinese (256/300), 2026",c2:"HSKK Intermediate, spoken Chinese (74/100), 2026",c3:"VSTEP Level 3, English (B1), 2024",
+ct_h:"Let’s talk",ct_p:"Is your team looking for someone who works carefully and likes to learn? Send me an email and I’ll reply as soon as I can.",ct_loc:"Nghệ An, Vietnam",
+nav_learn:"Learning",l_h:"What I learned at university",
+l_intro:"My degree gave me a solid base in programming and software work. I can use these areas at a good working level, and I learn more every day.",
+l1_t:"C programming",l1_p:"Variables, loops, functions, arrays, pointers and basic data structures. It taught me to think step by step and to read error messages.",
+l2_t:"Python",l2_p:"Writing small scripts to process files and data. I use it to automate repetitive steps at work.",
+l3_t:"HTML & CSS",l3_p:"Building responsive pages with semantic structure, flexbox and grid. This website uses the same basics.",
+l4_t:"Data basics",l4_p:"Organizing and summarizing data with Excel and simple scripts, then presenting the results clearly.",
+l5_t:"Testing & process",l5_p:"Test cases, bug reports and how a project moves from requirements to delivery. I applied this during my internship at WowUp.",
+l_note:"I’m still learning. When I hit a problem, I ask, check and fix it rather than guess.",
+j1_d:"Kept work organized with spreadsheets and followed the progress of each video.",
+j2_d:"Joined team meetings and suggested ways to solve problems found during testing.",
+title:"Đinh Thị Quỳnh | IT Graduate"},
+zh:{nav_about:"关于我",nav_exp:"工作经历",nav_edu:"教育背景",nav_contact:"联系我",
+h1:"你好，我是 Quỳnh。我在找一个能做实事、每天都能学到新东西的地方。",
+lead:"我毕业于荣市大学信息技术专业，先后在软件公司和传媒公司工作过。我希望与专业的团队一起长期成长。",
+cta1:"看看我做过的事",cta2:"打个招呼",
+about1:"我学习的是信息技术，方向为软件编程与开发。毕业前后，我在产品的两端都有实践：与开发人员一起做测试，也制作能触达真实观众的内容。",
+about2:"我喜欢任务清晰、进度透明的工作方式，也习惯用技术和 AI 简化重复性工作。我希望加入一个专业的工作环境，把我的 IT 技能应用到实际工作中，向有经验的同事学习，并稳定、长期地成长。",
+sk1:"专业技能",sk2:"软技能",
+s_test:"软件测试",s_code:"基础编程",s_pm:"任务与项目协助",s_office:"办公软件与 AI",s_video:"视频剪辑",s_seo:"YouTube SEO",
+s_team:"团队合作",s_listen:"积极倾听",s_org:"工作条理",
+j1_t:"视频剪辑与 YouTube SEO",
+j1_a:"使用 CapCut、Premiere、After Effects 和 Photoshop 剪辑并完成视频。",
+j1_b:"优化标题、描述和内容，提高 YouTube 搜索表现。",
+j1_c:"开发小工具，自动化重复步骤，缩短处理时间。",
+j1_r:"成果：参与的频道累计播放量达 1200 万次，并协助完成每月 1000 美元的收入目标。",
+j2_t:"测试与项目协助实习生",
+j2_a:"编写测试用例，执行功能测试并记录结果。",
+j2_b:"提交并跟踪缺陷，与开发人员一起复测修复结果。",
+j2_c:"创建任务，跟进团队进度，并与客户确认需求。",
+j2_r:"成果：交付了一家中文培训中心招生网站的第一阶段。",
+e_t:"荣市大学",e_s:"工程技术学院。信息技术专业学士，软件编程与开发方向。",e_g:"CGPA 3.05 / 4.0",
+c_t:"证书",c1:"HSK 4 级，中文（256/300），2026",c2:"HSKK 中级，中文口语（74/100），2026",c3:"VSTEP 3 级，英语（B1），2024",
+ct_h:"聊一聊吧",ct_p:"如果你的团队在找一个做事细心、乐于学习的人，请给我发邮件，我会尽快回复。",ct_loc:"越南 义安省",
+nav_learn:"学习内容",l_h:"我在大学学到的",
+l_intro:"大学让我在编程和软件工作方面打下了扎实的基础。这些领域我都能胜任日常使用，而且每天都在学到更多。",
+l1_t:"C 语言",l1_p:"变量、循环、函数、数组、指针和基础数据结构。它教会我一步一步地思考问题，并学会看懂报错信息。",
+l2_t:"Python",l2_p:"编写小脚本处理文件和数据，在工作中用来自动化重复步骤。",
+l3_t:"HTML 与 CSS",l3_p:"用语义化结构、Flexbox 和 Grid 制作响应式页面。这个网站用的也是同样的基础。",
+l4_t:"数据基础",l4_p:"用 Excel 和简单脚本整理、汇总数据，并清楚地呈现结果。",
+l5_t:"测试与流程",l5_p:"测试用例、缺陷报告，以及项目从需求到交付的过程。我在 WowUp 实习时用到了这些。",
+l_note:"我还在学习中，遇到问题宁可提问、核对、修正，也不靠猜。",
+j1_d:"用表格管理工作，跟进每个视频的进度。",
+j2_d:"参加团队会议，并就测试中发现的问题提出解决思路。",
+title:"Đinh Thị Quỳnh | 信息技术毕业生"},
+vi:{nav_about:"Giới thiệu",nav_exp:"Kinh nghiệm",nav_edu:"Học vấn",nav_contact:"Liên hệ",
+h1:"Xin chào, mình là Quỳnh. Mình đang tìm nơi để làm việc thật và học thêm mỗi ngày.",
+lead:"Mình tốt nghiệp ngành Công nghệ thông tin tại Đại học Vinh và đã làm việc ở hai môi trường: công ty phần mềm và công ty truyền thông. Mình muốn phát triển lâu dài cùng một đội ngũ chuyên nghiệp.",
+cta1:"Xem mình đã làm gì",cta2:"Chào mình nhé",
+about1:"Mình học ngành Công nghệ thông tin, chuyên ngành Lập trình và Phát triển phần mềm. Mình đã làm việc ở cả hai phía của một sản phẩm: kiểm thử cùng lập trình viên và sản xuất nội dung đến với khán giả thật.",
+about2:"Mình thích công việc có nhiệm vụ rõ ràng, tiến độ minh bạch và hay dùng công nghệ, AI để làm việc lặp lại nhẹ nhàng hơn. Mình mong tìm một môi trường làm việc chuyên nghiệp, nơi mình áp dụng được kỹ năng CNTT vào công việc thực tế, học hỏi từ những người có kinh nghiệm và phát triển ổn định lâu dài.",
+sk1:"Kỹ năng chuyên môn",sk2:"Kỹ năng mềm",
+s_test:"Kiểm thử phần mềm",s_code:"Lập trình cơ bản",s_pm:"Hỗ trợ task & dự án",s_office:"Tin học văn phòng & AI",s_video:"Biên tập video",s_seo:"SEO YouTube",
+s_team:"Làm việc nhóm",s_listen:"Lắng nghe",s_org:"Tổ chức công việc",
+j1_t:"Biên tập video & SEO YouTube",
+j1_a:"Biên tập và hoàn thiện video bằng CapCut, Premiere, After Effects và Photoshop.",
+j1_b:"Tối ưu tiêu đề, mô tả và nội dung để video dễ tìm trên YouTube.",
+j1_c:"Xây dựng công cụ nhỏ để tự động hóa thao tác lặp lại, rút ngắn thời gian xử lý.",
+j1_r:"Kết quả: góp phần giúp các kênh đạt tổng 12 triệu lượt xem và hỗ trợ mục tiêu doanh thu 1.000 USD/tháng.",
+j2_t:"Thực tập Tester & hỗ trợ quản lý dự án",
+j2_a:"Viết test case, kiểm thử chức năng và ghi nhận kết quả.",
+j2_b:"Báo cáo và theo dõi lỗi, kiểm tra lại sau khi lập trình viên sửa.",
+j2_c:"Tạo task, theo dõi tiến độ nhóm và làm rõ yêu cầu với khách hàng.",
+j2_r:"Kết quả: bàn giao giai đoạn 1 website tuyển sinh cho một trung tâm tiếng Trung.",
+e_t:"Đại học Vinh",e_s:"Viện Kỹ thuật và Công nghệ. Cử nhân Công nghệ thông tin, chuyên ngành Lập trình và Phát triển phần mềm.",e_g:"CGPA 3.05 / 4.0",
+c_t:"Chứng chỉ",c1:"HSK 4, tiếng Trung (256/300), 2026",c2:"HSKK Trung cấp, khẩu ngữ tiếng Trung (74/100), 2026",c3:"VSTEP Bậc 3, tiếng Anh (B1), 2024",
+ct_h:"Trò chuyện nhé",ct_p:"Nếu đội ngũ của bạn đang cần một người làm việc cẩn thận và thích học hỏi, hãy gửi email, mình sẽ trả lời sớm nhất có thể.",ct_loc:"Nghệ An, Việt Nam",
+nav_learn:"Kiến thức",l_h:"Những gì mình đã học ở đại học",
+l_intro:"Chương trình học cho mình nền tảng vững về lập trình và làm phần mềm. Mình dùng được các mảng này ở mức làm việc tốt và mỗi ngày học thêm được nhiều điều.",
+l1_t:"Lập trình C",l1_p:"Biến, vòng lặp, hàm, mảng, con trỏ và cấu trúc dữ liệu cơ bản. Môn này giúp mình quen suy nghĩ từng bước và đọc hiểu thông báo lỗi.",
+l2_t:"Python",l2_p:"Viết script nhỏ để xử lý file và dữ liệu. Mình dùng nó để tự động hóa các bước lặp lại trong công việc.",
+l3_t:"HTML & CSS",l3_p:"Dựng trang responsive với cấu trúc ngữ nghĩa, flexbox và grid. Website này cũng dùng những kiến thức nền đó.",
+l4_t:"Dữ liệu cơ bản",l4_p:"Sắp xếp và tổng hợp dữ liệu bằng Excel và script đơn giản, rồi trình bày kết quả rõ ràng.",
+l5_t:"Kiểm thử & quy trình",l5_p:"Test case, báo cáo lỗi và cách một dự án đi từ yêu cầu đến bàn giao. Mình đã áp dụng khi thực tập tại WowUp.",
+l_note:"Mình vẫn đang học, gặp vấn đề thì hỏi, kiểm tra rồi sửa chứ không đoán.",
+j1_d:"Quản lý công việc bằng bảng tính và theo dõi tiến độ từng video.",
+j2_d:"Tham gia họp nhóm và đề xuất hướng xử lý cho các vấn đề phát hiện khi kiểm thử.",
+title:"Đinh Thị Quỳnh | Cử nhân CNTT"}
+};
+var HL={en:"en",zh:"zh-CN",vi:"vi"};
+function apply(l){
+  document.querySelectorAll("[data-i18n]").forEach(function(el){el.textContent=T[l][el.dataset.i18n]});
+  document.documentElement.lang=HL[l];
+  document.title=T[l].title;
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l)});
+}
+var cur="en";
+try{var s=localStorage.getItem("lang");if(s&&T[s])cur=s;}catch(e){}
+apply(cur);
+document.querySelectorAll(".lang button").forEach(function(b){
+  b.addEventListener("click",function(){cur=b.dataset.lang;apply(cur);try{localStorage.setItem("lang",cur)}catch(e){}});
+});
 (function(){
-  var root=document.documentElement, btn=document.getElementById('theme');
-  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
-  btn.addEventListener('click',function(){
-    var dark=root.getAttribute('data-theme')==='dark' ||
-      (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
-    var next=dark?'light':'dark';
-    root.setAttribute('data-theme',next);
-    try{localStorage.setItem('theme',next);}catch(e){}
+  var root=document.documentElement;
+  try{var t=localStorage.getItem("theme");if(t)root.setAttribute("data-theme",t);}catch(e){}
+  document.getElementById("theme").addEventListener("click",function(){
+    var d=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+    var n=d?"light":"dark";root.setAttribute("data-theme",n);
+    try{localStorage.setItem("theme",n)}catch(e){}
   });
 })();
 </script>
